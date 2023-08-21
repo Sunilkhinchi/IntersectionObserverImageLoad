@@ -22,9 +22,12 @@ document.addEventListener("DOMContentLoaded", function(){
     //        observer.observe(card);
     // })
 
+
+    
+
 let lazyImages = document.querySelectorAll(".image-tag.lazy-load");
 
-let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+let lazyImageObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             let lazyImage = entry.target;
